@@ -7,5 +7,5 @@ class Book < ApplicationRecord
   validates :year_published, numericality: { only_integer: true }
   
   scope :alphabetical, -> { order('title') }
-  scope :last_decade, -> { where ('year_published > ?', 2006) }
+  scope :last_decade, -> { where('year_published > ?', 2006) }
 end

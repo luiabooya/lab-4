@@ -6,7 +6,9 @@ class Author < ApplicationRecord
   validates :last_name, presence: true
   
   scope :alphabetical, -> { order('last_name, first_name') }
-  
+
   def name
     "#{last_name}, #{first_name}"
+  end
+  
 end
